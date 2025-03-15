@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesugbenga Omoniwa's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
                 <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
+                    <li><a href="#header"><i class="fa-solid fa-house"></i></i><span>Home</span></a></li>
+                    <li><a href="#about"><i class="fa-solid fa-user"></i><span>About</span></a></li>
+                    <li><a href="#experience"><i class="fa-solid fa-briefcase"></i><span>Experience</span></a></li>
+                    <li><a href="#projects"><i class="fa-solid  fa-code"></i><span>Projects</span></a></li>
+                    <li><a href="images/resume.pdf"><i class="fa-solid  fa-file"></i><span>Resume</span></a></li>
+                    <li><a href="#contact"><i class="fa-solid  fa-envelope"></i><span>Contact</span></a></li>
+                    <!-- <i class="fas fa-times" onclick="closemenu()"></i> -->
                 </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
+                <!-- <i class="fas fa-bars" onclick="openmenu()"></i> -->
             </nav>
                 <div class="header-text">
                     <p>Software Engineer</p>
@@ -28,6 +29,35 @@
                 </div>
         </div>
     </div>
+
+
+    <!-- work experience -->
+    <div id="experience">
+        <div class="container">
+            <h1 class="sub-title">Work Experience</h1>
+            <div class="services-list">
+                <div>
+                    <img src="images/amazon.png" alt="Amazon logo">
+                    <h2>Software Development Engineer Intern, Amazon</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis. </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <img src="images/enbridge.png" alt="Enbridge logo">
+                    <h2>Software/Hydraulic Engineer Intern, Enbridge</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis. </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <img src="images/enbridge.png" alt="Enbridge logo">
+                    <h2>Knowledge Management Analsyt Intern, Enbridge</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- about -->
     <div id="about">
@@ -84,38 +114,10 @@
     </div>
 
 
-    <!-- services -->
-    <div id="services">
+    <!-- projetcs -->
+    <div id="projects">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fas fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis. </p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fas fa-crop-alt"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis. </p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fas fa-app-store"></i>
-                    <h2>App Design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis.</p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- portfolio -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
+            <h1 class="sub-title">My Projects</h1>
             <div class="work-list">
                 <div class="work">
                     <img src="images/work-1.png">
@@ -141,8 +143,8 @@
                         <a href="#"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <a href="#" class="btn">See more</a>
         </div>
+        <a href="#" class="btn">See more</a>
     </div>
 
     <!-- contact -->
@@ -170,6 +172,9 @@
             </div>
         </div>   
     </div>
+
+    <a href="#header" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+
     <div class="copyright">
         <p>Copyright &copy; 2025 Jesugbenga Omoniwa. All rights reserved.</p>
     </div>
