@@ -568,7 +568,7 @@ nav .fas{
     display: none;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .header-text{
         margin-top: 20%;
         font-size: 16px;
@@ -584,7 +584,7 @@ nav .fas{
     }
     nav .fa-solid{
         display: block;
-        font-size: 14px;
+        font-size: 16px;
     }
     nav ul{
         align-items: center;
@@ -616,7 +616,7 @@ nav .fas{
         margin-right: 20px;
     }
     .contact{
-        width: 300px;
+        width: 330px;
         padding: 1rem;
     }
     .contact-links {
@@ -637,8 +637,15 @@ nav .fas{
         justify-content: center; 
     }
     .services-list,
-    .work-list {
+    .work-list, .contact {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .work img, .layer{
+        display: none;
+    }
+    .project-info {
+        width: 100%;
+        padding: 5px;
     }
 }
 #msg{
