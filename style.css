@@ -81,7 +81,7 @@ nav ul li a {
 }
 
 nav ul li a i {
-    font-size: 10px;
+    font-size: 13px;
     margin-right: 8px; 
 }
 
@@ -394,7 +394,7 @@ nav ul .fa-times {
 
 .project-info p {
     font-size: 14px;
-    color: #bbb;
+    color: #ccc;
 }
 
 .btn{
