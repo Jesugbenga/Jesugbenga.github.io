@@ -4,329 +4,481 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesugbenga Omoniwa's Portfolio</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Jesugbenga Omoniwa — Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.svg">
+    <meta name="theme-color" content="#ece4d6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <ul>
-                    <!-- <li><a href="#header"><i class="fa-solid fa-house"></i></i><span>Home</span></a></li> -->
-                    <li><a href="#header"><i class="fa-solid fa-user"></i><span>About</span></a></li>
-                    <li><a href="#experience"><i class="fa-solid fa-briefcase"></i><span>Experience</span></a></li>
-                    <li><a href="#projects"><i class="fa-solid fa-code"></i><span>Projects</span></a></li>
-                    <li><a href="#contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
-                    <li><a href="https://drive.google.com/file/d/1-Sf3YIbfI5tTTK7eQFmO1CLMqWc-7buO/view?usp=sharing"><i class="fa-regular fa-file-pdf"></i><span>Resume</span></a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <!-- Profile Picture -->
-                <img src="images/background.png" alt="Jesugbenga Omoniwa Profile Picture" class="profile-pic">
-            
-                <!-- Text Content -->
-                <p>Hey, I'm</p>
-                <h1><span>Jesugbenga</span> Omoniwa</h1>
-                <p>
-                    A <span class="bold-text">Full-Stack developer</span> and undergraduate student at the <span class="bold-text">University of Alberta</span>.<br>
-                    I am passionate about building <span class="bold-text">efficient, user-centric software solutions</span><br>
-                    and continuously exploring <span class="bold-text">new technologies</span>.
-                </p>
-            
-                <!-- Social Icons -->
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/jesugbenga-omoniwa" target="_blank" title="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
-                    <a href="https://github.com/Jesugbenga" target="_blank" title="GitHub"><img src="images/github.png" alt="GitHub"></a>
-                    <a href="https://drive.google.com/file/d/1-Sf3YIbfI5tTTK7eQFmO1CLMqWc-7buO/view?usp=sharing" target="_blank" title="Resume"><img src="images/resume.png" alt="Resume"></a>
-                </div>
-            </div>
+    <!-- Custom cursor + trailing accent dot -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-trail" aria-hidden="true"></div>
+
+    <!-- Floating thumbnail used by the Works list on hover -->
+    <div class="hover-preview" aria-hidden="true">
+        <div class="hover-preview-inner">
+            <img src="" alt="">
         </div>
     </div>
 
+    <!-- Top navigation -->
+    <header class="site-header">
+        <a href="#top" class="logo" aria-label="Home">
+            <span class="logo-mark">JO</span><span class="logo-dot">.</span>
+        </a>
+        <nav class="primary-nav">
+            <a href="#works">works</a>
+            <a href="#experience">experience</a>
+            <a href="#about">about</a>
+            <a href="#contact" class="contact-link">
+                <span class="contact-pip"></span> let’s talk
+            </a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="dot dot-1"></span>
+            <span class="dot dot-2"></span>
+            <span class="dot dot-3"></span>
+        </button>
+    </header>
 
-    <!-- work experience -->
-    <div id="experience">
-        <div class="container">
-            <h1 class="sub-title">Work Experience</h1>
-            <p class="sub-title2">MY WORK SO FAR...</p>
-            <div class="services-list">
-                <div class="exp-title">
-                    <img src="images/microsoft.png" alt="Microsoft logo">
-                    <div class="exp-sub">
-                        <h2>Software Engineer Intern, Microsoft</h2>
-                        <p><i class="fa-solid fa-calendar-days"></i> May 2025 - August 2025</p>
-                    </div>
-                    <ul>
-                        <li>Built a custom date range picker using React, TypeScript, and Fluent UI, enabling flexible results filtering in MS Copilot AI Search.</li>
-                        <li>Replaced manual pagination with infinite scroll, improving usability and performance for 80M+ global users.</li>
-                        <li>Collaborated with PMs and senior engineers to refine product requirements and accelerate feature delivery by 20%.</li>
-                    </ul>
+    <!-- Mobile bottom dock — auto-highlights active section -->
+    <nav class="mobile-dock" aria-label="Section navigation">
+        <a href="#top" data-target="hero" class="dock-item is-active">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <span>Home</span>
+        </a>
+        <a href="#works" data-target="works" class="dock-item">
+            <i class="fa-solid fa-grip" aria-hidden="true"></i>
+            <span>Works</span>
+        </a>
+        <a href="#experience" data-target="experience" class="dock-item">
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            <span>Work</span>
+        </a>
+        <a href="#about" data-target="about" class="dock-item">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            <span>About</span>
+        </a>
+        <a href="#contact" data-target="contact" class="dock-item dock-item--accent">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            <span>Talk</span>
+        </a>
+    </nav>
+
+    <main id="top">
+        <!-- ===================== HERO ===================== -->
+        <section id="hero" class="hero">
+            <h1 class="hero-title">
+                OMONIWA<span class="r">®</span>
+            </h1>
+
+            <div class="hero-meta">
+                <div class="meta-col">
+                    <span class="meta-label">PORTFOLIO</span>
                 </div>
-                <div class="exp-title">
-                    <img src="images/ualberta.png" alt="Amazon logo">
-                    <div class="exp-sub">
-                        <h2>Research Assistant, University of Alberta</h2>
-                        <p><i class="fa-solid fa-calendar-days"></i> February 2025 - April 2025</p>
-                    </div>
-                    <ul>
-                        <li>Automated job data collection by developing a Python script integrating with the Vicinity Jobs API, streamlining job description retrieval and storage.</li>
-                        <li>Optimized data processing workflows using Pandas and NumPy, enabling structured storage and analysis in CSV and Stata formats.</li>
-                        <li>Enhanced logging and error handling mechanisms, ensuring robust data extraction with minimal downtime.</li>
-                    </ul>
+                <div class="meta-col meta-col--wide">
+                    <span class="meta-label">WHO</span>
+                    <p>
+                        Jesugbenga Omoniwa — a full-stack developer and software 
+                        engineer at Microsoft, building
+                        efficient, user-centric software.
+                    </p>
                 </div>
-                <div class="exp-title">
-                    <img src="images/amazon.png" alt="Amazon logo">
-                    <div class="exp-sub">
-                        <h2>Software Development Engineer Intern, Amazon</h2>
-                        <p><i class="fa-solid fa-calendar-days"></i> May 2024 - August 2024</p>
-                    </div>
-                    <ul>
-                        <li>Developed and deployed a deletion API using Java, Kotlin, and AWS (S3, DynamoDB, SNS, SQS) to automate user data removal and ensure compliance with industry GDPR standards.</li>
-                        <li>Automated manual ticket resolution, reducing Severity-2 incidents by 85% and increasing team efficiency.</li>
-                        <li>Partnered with cross-functional teams to design a compliance-driven data deletion pipeline, improving system reliability.</li>
-                    </ul>
+                <div class="meta-col">
+                    <span class="meta-label">BASED IN</span>
+                    <p>Vancouver, British Columbia — open to collaboration.</p>
                 </div>
-                <div class="exp-title">
-                    <img src="images/enbridge.png" alt="Enbridge logo">
-                    <div class="exp-sub">
-                        <h2>Software/Hydraulic Engineer Intern, Enbridge</h2>
-                        <p><i class="fa-solid fa-calendar-days"></i> May 2023 - August 2023</p>
-                    </div>
-                    <ul>
-                        <li> Leveraged Power BI and SQL to analyze performance metrics, identifying key improvement areas in pipeline systems. </li>
-                        <li> Collaborated on hydraulic system automation using UML models in MS Visio, improving workflow visualization. </li>
-                        <li> Streamlined project tracking with Visual BASIC in Excel and SharePoint, enhancing team coordination and planning. </li>
-                    </ul>
-                </div>
-                <div class="exp-title">
-                    <img src="images/enbridge.png" alt="Enbridge logo">
-                    <div class="exp-sub">
-                        <h2>Knowledge Management Analsyt Intern, Enbridge</h2>
-                        <p><i class="fa-solid fa-calendar-days"></i> May 2022 - August 2022</p>
-                    </div>
-                    <ul>
-                        <li>Established the HR Know repository using MS SharePoint, improving information accessibility and reducing search time by 40%.</li>
-                        <li>Partnered with HR teams to enhance internal web portals serving 10,000+ employees, boosting productivity by ~30%.</li>
-                        <li>Led efforts to modernize content organization, improving knowledge retrieval and collaboration across multiple departments.</li>
-                    </ul>
+                <div class="meta-col meta-col--right">
+                    <span class="meta-label">© 2026</span>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-
-    <!-- projetcs -->
-    <div id="projects">
-        <div class="container">
-            <h1 class="sub-title">My Projects</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/qvault.png" alt="QVault Learning Management System">
-                    <div class="layer">
-                        <a href="https://github.com/UAlberta-CMPUT401/f24project-Dept-of-Pharmacology" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
-                        <!-- <a href="#" title="Live Demo" class="demo-link"><i class="fa-solid fa-external-link-alt"></i></a> -->
-                    </div>
-                    <div class="project-info">
-                        <h3>QVault Learning Management System</h3>
-                        <p>
-                            Goal: Designed and developed a course management platform to streamline educational workflows for professors and students.<br><br>
-                            Impact: Collaborated with a team of 6 to create a robust platform, enabling seamless course management and deployment. Prototyped a 
-                            desktop app for a professor in the UA Dept. of Pharmacology, showcasing adaptability to user needs.<br><br>
-                            
-                            Skills: Django, Python, HTML, CSS, JavaScript, Figma, UML, GitHub, Docker, Selenium, Electron
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/showtrove.jpg" alt="Showtrove Movie Discovery Website">
-                    <div class="layer">
-                        <a href="https://github.com/Jesugbenga/Showtrove" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://showtrove.ca" title="Live Demo" class="demo-link"><i class="fa-solid fa-external-link-alt"></i></a>
-                    </div>
-                    <div class="project-info">
-                        <h3>Showtrove Website</h3>
-                        <p>
-                            Goal: Built a full-stack web application for movie discovery, integrating advanced search functionality and an AI-powered chatbot. <br><br>
-                            Impact: Delivered a user-friendly platform with up-to-date movie information and an engaging AI chatbot, enhancing the movie discovery 
-                            experience. The scalable backend infrastructure ensured efficient data management and a visually appealing UI.<br><br>
-
-                            Skills: React, Redux, CSS, Node.js, Firebase, Fuse.js, TMDB API, Next.js, TypeScript, Shadcn UI, Tailwind CSS, OpenAI ChatGPT, 
-                            Vercel AI SDK, Pinecone, Langchain, MongoDB
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/upnext.png" alt="UpNext Mobile App">
-                    <div class="layer">
-                        <a href="https://github.com/Jesugbenga/upnext" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
-                        <!-- <a href="#" title="Live Demo" class="demo-link"><i class="fa-solid fa-external-link-alt"></i></a> -->
-                    </div>
-                    <div class="project-info">
-                        <h3>UpNext Messaging & Task Management Mobile App</h3>
-                        <p>
-                            Goal: Created a cross-platform mobile app for messaging and task management with a focus on user-friendly design and performance.<br><br>
-                            Impact: Delivered a seamless messaging experience and reliable task management system, compatible across Android and iOS platforms. 
-                            The REST API and persistent storage implementation ensured high performance and data reliability.<br><br>
-
-                            Skills: Flutter, Dart, Go (Golang), Gin framework, MySQL, GORM
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/face-landmark.jpeg" alt="Gesture Recognition and Face Landmark Detection">
-                    <div class="layer">
-                        <a href="#" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
-                        <!-- <a href="#" title="Live Demo" class="demo-link"><i class="fa-solid fa-external-link-alt"></i></a> -->
-                    </div>
-                    <div class="project-info">
-                        <h3>Gesture Recognition and Face Landmark Detection</h3>
-                        <p>
-                            Goal: Developed a real-time gesture recognition and face landmark detection system using advanced computer vision techniques.<br><br>
-                            Impact: Achieved 96% accuracy in gesture recognition and 91% accuracy in facial expression tracking, with optimized inference times 
-                            for real-time performance. The system was adaptable to various lighting conditions and use cases, demonstrating precision and versatility.<br><br>
-
-                            Skills: Python, MediaPipe, OpenCV
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/muuv.png" alt="Looply - Community Ride-Sharing App">
-                    <div class="layer">
-                        <a href="https://github.com/Jesugbenga/looply" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
-                        <!-- <a href="#" title="Live Demo" class="demo-link"><i class="fa-solid fa-external-link-alt"></i></a> -->
-                    </div>
-                    <div class="project-info">
-                        <h3>Looply - Community Ride-Sharing App</h3>
-                        <p>
-                            Goal: Built a community-first ride-sharing platform to enable fair, reliable, and inclusive local transportation, inspired by church and neighborhood needs.<br><br>
-                            Impact: Implemented smart driver matching and real-time ride updates, improving ride fairness, efficiency, and driver engagement. Scalable algorithm supports growth from small communities to cities.<br><br>
-                            Skills: React Native, TypeScript, Firebase, Geoapify, OneSignal, Expo
-                        </p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/hearth.png" alt="Hearth - AI Home Health Manager">
-                    <div class="layer">
-                        <a href="https://github.com/Jesugbenga/hearth" title="View on GitHub"><i class="fa-brands fa-github"></i></a>
-                        <!-- <a href="#" title="Lisve Demo" class="demo-link"><i class="fa-solid fa-external-link-alt"></i></a> -->
-                    </div>
-                    <div class="project-info">
-                        <h3>Hearth - AI Home Health Manager</h3>
-                        <p>
-                            Goal: Developed an AI-powered home management platform that provides real-time health scoring and proactive maintenance alerts for homeowners.<br><br>
-                            Impact: Created a comprehensive system that tracks home conditions, utility patterns, and maintenance schedules, generating trusted verifiable reports that increase property value and prevent costly repairs through early detection.<br><br>
-                            Skills: React Native, TypeScript, Firebase, Expo, AI Agent, Llama3 API
-                        </p>
-                    </div>
-                </div>
-                
-                
+        <!-- ===================== SELECTED WORKS ===================== -->
+        <section id="works" class="section works">
+            <div class="section-head">
+                <span class="section-label">— selected works</span>
+                <h2 class="section-title">
+                    Things I’ve<br>built lately<span class="accent-dot">.</span>
+                </h2>
             </div>
-            <a href="https://github.com/Jesugbenga?tab=repositories" class="btn">See more</a>
-        </div>
-    </div>
 
-    <!-- contact -->
-    <div id="contact">
-        <div class="container">
-            <div class="contact">
-                <div class="contact-info">
-                    <h3>Let's Connect!</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out!</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>jesugbengao@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Edmonton, Alberta, Canada</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <div>
-                                <h4>University</h4>
-                                <p>University of Alberta</p>
-                            </div>
-                        </div>
+            <ul class="works-list" id="worksList">
+                <li class="work-item" data-image="images/qvault.png">
+                    <a href="https://github.com/UAlberta-CMPUT401/f24project-Dept-of-Pharmacology" target="_blank" rel="noopener">
+                        <img class="work-thumb" src="images/qvault.png" alt="" loading="lazy">
+                        <span class="work-index">01</span>
+                        <span class="work-title">QVault — Learning Management System</span>
+                        <span class="work-meta">Django · Python · Docker · 2024</span>
+                        <span class="work-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="work-item" data-image="images/showtrove.jpg">
+                    <a href="https://showtrove.ca" target="_blank" rel="noopener">
+                        <img class="work-thumb" src="images/showtrove.jpg" alt="" loading="lazy">
+                        <span class="work-index">02</span>
+                        <span class="work-title">Showtrove — Movie Discovery</span>
+                        <span class="work-meta">Next.js · TypeScript · OpenAI · 2024</span>
+                        <span class="work-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="work-item" data-image="images/upnext.png">
+                    <a href="https://github.com/Jesugbenga/upnext" target="_blank" rel="noopener">
+                        <img class="work-thumb" src="images/upnext.png" alt="" loading="lazy">
+                        <span class="work-index">03</span>
+                        <span class="work-title">UpNext — Messaging &amp; Tasks</span>
+                        <span class="work-meta">Flutter · Go · MySQL · 2024</span>
+                        <span class="work-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="work-item" data-image="images/muuv.png">
+                    <a href="https://github.com/Jesugbenga/looply" target="_blank" rel="noopener">
+                        <img class="work-thumb" src="images/muuv.png" alt="" loading="lazy">
+                        <span class="work-index">04</span>
+                        <span class="work-title">Looply — Community Ride-Sharing</span>
+                        <span class="work-meta">React Native · Firebase · 2025</span>
+                        <span class="work-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="work-item" data-image="images/hearth.png">
+                    <a href="https://github.com/Jesugbenga/hearth" target="_blank" rel="noopener">
+                        <img class="work-thumb" src="images/hearth.png" alt="" loading="lazy">
+                        <span class="work-index">05</span>
+                        <span class="work-title">Hearth — AI Home Health Manager</span>
+                        <span class="work-meta">React Native · Llama3 · Firebase · 2025</span>
+                        <span class="work-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="work-item" data-image="images/face-landmark.jpeg">
+                    <a href="#" target="_blank" rel="noopener">
+                        <img class="work-thumb" src="images/face-landmark.jpeg" alt="" loading="lazy">
+                        <span class="work-index">06</span>
+                        <span class="work-title">Gesture &amp; Face Landmark Detection</span>
+                        <span class="work-meta">Python · MediaPipe · OpenCV · 2023</span>
+                        <span class="work-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+            </ul>
+
+            <a href="https://github.com/Jesugbenga?tab=repositories" target="_blank" rel="noopener" class="ghost-btn">
+                see everything on github <span aria-hidden="true">↗</span>
+            </a>
+        </section>
+
+        <!-- ===================== EXPERIENCE ===================== -->
+        <section id="experience" class="section experience">
+            <div class="section-head">
+                <span class="section-label">— experience</span>
+                <h2 class="section-title">
+                    Where I’ve<br>shipped code<span class="accent-dot">.</span>
+                </h2>
+            </div>
+
+            <ul class="exp-list">
+                <li class="exp-item exp-item--current">
+                    <div class="exp-logo">
+                        <img src="images/microsoft.png" alt="Microsoft">
                     </div>
+                    <div class="exp-body">
+                        <h3 class="exp-role">Software Engineer <span class="exp-now">— now</span></h3>
+                        <span class="exp-company">Microsoft · MAI Copilot Search</span>
+                        <ul class="exp-points">
+                            <li>Working on the forefront of how millions of people interact with modern AI in their daily lives, shipping features inside Microsoft Copilot Search.</li>
+                        </ul>
+                    </div>
+                    <span class="exp-date">Feb 2026 — Present</span>
+                </li>
 
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/jesugbenga-omoniwa/" target="_blank" title="LinkedIn">
-                            <img src="images/linkedin-3d.png" alt="LinkedIn">
-                        </a>
-                        <a href="https://github.com/Jesugbenga" target="_blank" title="GitHub">
-                            <img src="images/github.png" alt="GitHub">
-                        </a>
-                        <a href="https://drive.google.com/file/d/1-Sf3YIbfI5tTTK7eQFmO1CLMqWc-7buO/view?usp=sharing" target="_blank" title="Resume">
-                            <img src="images/resume.png" alt="Resume">
-                        </a>
+                <li class="exp-item">
+                    <div class="exp-logo">
+                        <img src="images/microsoft.png" alt="Microsoft">
+                    </div>
+                    <div class="exp-body">
+                        <h3 class="exp-role">Software Engineer Intern</h3>
+                        <span class="exp-company">Microsoft</span>
+                        <ul class="exp-points">
+                            <li>Built a custom date range picker with React, TypeScript, and Fluent UI, enabling flexible results filtering in MS Copilot AI Search.</li>
+                            <li>Replaced manual pagination with infinite scroll, improving usability and performance for 80M+ global users.</li>
+                            <li>Collaborated with PMs and senior engineers to refine product requirements and accelerated feature delivery by 20%.</li>
+                        </ul>
+                    </div>
+                    <span class="exp-date">May 2025 — Aug 2025</span>
+                </li>
+
+                <li class="exp-item">
+                    <div class="exp-logo">
+                        <img src="images/ualberta.png" alt="University of Alberta">
+                    </div>
+                    <div class="exp-body">
+                        <h3 class="exp-role">Research Assistant</h3>
+                        <span class="exp-company">University of Alberta</span>
+                        <ul class="exp-points">
+                            <li>Automated job-data collection with a Python script integrating the Vicinity Jobs API.</li>
+                            <li>Optimized data processing with Pandas and NumPy, enabling structured CSV / Stata storage.</li>
+                            <li>Hardened logging and error handling for robust extraction with minimal downtime.</li>
+                        </ul>
+                    </div>
+                    <span class="exp-date">Feb 2025 — Apr 2025</span>
+                </li>
+
+                <li class="exp-item">
+                    <div class="exp-logo">
+                        <img src="images/amazon.png" alt="Amazon">
+                    </div>
+                    <div class="exp-body">
+                        <h3 class="exp-role">Software Development Engineer Intern</h3>
+                        <span class="exp-company">Amazon</span>
+                        <ul class="exp-points">
+                            <li>Developed and deployed a deletion API (Java, Kotlin, AWS S3 / DynamoDB / SNS / SQS) for GDPR-compliant user-data removal.</li>
+                            <li>Automated manual ticket resolution, cutting Sev-2 incidents by 85%.</li>
+                            <li>Partnered with cross-functional teams to design a compliance-driven data deletion pipeline.</li>
+                        </ul>
+                    </div>
+                    <span class="exp-date">May 2024 — Aug 2024</span>
+                </li>
+
+                <li class="exp-item">
+                    <div class="exp-logo">
+                        <img src="images/enbridge.png" alt="Enbridge">
+                    </div>
+                    <div class="exp-body">
+                        <h3 class="exp-role">Software / Hydraulic Engineer Intern</h3>
+                        <span class="exp-company">Enbridge</span>
+                        <ul class="exp-points">
+                            <li>Used Power BI &amp; SQL to surface pipeline performance bottlenecks.</li>
+                            <li>Modeled hydraulic system automation in UML (MS Visio) for clearer workflows.</li>
+                            <li>Streamlined project tracking with Visual Basic in Excel + SharePoint.</li>
+                        </ul>
+                    </div>
+                    <span class="exp-date">May 2023 — Aug 2023</span>
+                </li>
+
+                <li class="exp-item">
+                    <div class="exp-logo">
+                        <img src="images/enbridge.png" alt="Enbridge">
+                    </div>
+                    <div class="exp-body">
+                        <h3 class="exp-role">Knowledge Management Analyst Intern</h3>
+                        <span class="exp-company">Enbridge</span>
+                        <ul class="exp-points">
+                            <li>Built the HR Know repository on MS SharePoint, cutting search time by 40%.</li>
+                            <li>Improved internal web portals serving 10,000+ employees, boosting productivity ~30%.</li>
+                            <li>Modernized content organization across multiple HR departments.</li>
+                        </ul>
+                    </div>
+                    <span class="exp-date">May 2022 — Aug 2022</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section id="about" class="section about">
+            <div class="about-grid">
+                <div class="about-portrait">
+                    <img src="images/background.png" alt="Jesugbenga Omoniwa">
+                    <span class="portrait-tag">JO ’26</span>
+                </div>
+                <div class="about-copy">
+                    <span class="section-label">— about</span>
+                    <h2 class="section-title about-title">
+                        I design and build at the intersection of
+                        <em>craft</em>, <em>code</em> &amp; <em>people</em><span class="accent-dot">.</span>
+                    </h2>
+                    <p>
+                        I’m Jesugbenga — most people just call me Gbenga. I’m a
+                        full-stack developer who cares as much about the pixels
+                        as the plumbing. I’ve shipped features used by tens of
+                        millions, built side projects from scratch, and love
+                        turning fuzzy ideas into things you can actually click,
+                        tap and use.
+                    </p>
+                    <div class="about-stack">
+                        <div>
+                            <span class="meta-label">LANGUAGES</span>
+                            <p>Python · Java · Kotlin · JavaScript · TypeScript · C · C# · C++ · SQL · NoSQL · R · HTML · CSS · Dart · Go · Visual Basic</p>
+                        </div>
+                        <div>
+                            <span class="meta-label">FRAMEWORKS &amp; LIBRARIES</span>
+                            <p>React.js · Next.js · AngularJS · Redux · Node.js · JUnit · .NET · Django · PyTorch · NumPy · Flutter · Docker</p>
+                        </div>
+                        <div>
+                            <span class="meta-label">TOOLS</span>
+                            <p>AWS · MS Azure · Firebase · MongoDB · PostgreSQL · Selenium · Spring Boot · Power BI · Figma · MediaPipe · VS Code · IntelliJ</p>
+                        </div>
+                        <div>
+                            <span class="meta-label">MISCELLANEOUS</span>
+                            <p>OOP · Agile · UML · REST APIs · Electron · Data Analysis · DSA · CI/CD · Git / GitHub · MS Office · SharePoint</p>
+                        </div>
+                        <div class="about-stack-currently">
+                            <span class="meta-label">CURRENTLY</span>
+                            <p>Software Engineer @ Microsoft on the MAI Copilot Search team. Recently graduated CS @ University of Alberta — always open to interesting collaborations.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>   
-    </div>
+        </section>
 
-    <a href="#header" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact" class="section contact">
+            <span class="section-label">— let’s talk</span>
+            <h2 class="contact-headline">
+                Got an idea?<br>
+                I’m listening<span class="accent-dot">.</span>
+            </h2>
 
-    <div class="copyright">
-        <p>Copyright &copy; 2025 Jesugbenga Omoniwa. All rights reserved.</p>
-    </div>
+            <a class="contact-email" href="mailto:jesugbengao@gmail.com">
+                jesugbengao@gmail.com <span aria-hidden="true">↗</span>
+            </a>
+
+            <div class="contact-foot">
+                <div class="contact-col">
+                    <span class="meta-label">ELSEWHERE</span>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/jesugbenga-omoniwa/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                        <a href="https://github.com/Jesugbenga" target="_blank" rel="noopener">GitHub ↗</a>
+                        <a href="https://drive.google.com/file/d/1-Sf3YIbfI5tTTK7eQFmO1CLMqWc-7buO/view?usp=sharing" target="_blank" rel="noopener">Resume ↗</a>
+                    </div>
+                </div>
+                <div class="contact-col">
+                    <span class="meta-label">LOCATION</span>
+                    <p>Vancouver, British Columbia — Canada</p>
+                </div>
+                <div class="contact-col contact-col--right">
+                    <span class="meta-label">© 2026 OMONIWA</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="#top" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-        
-            for(tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
+        /* ---------- Theme toggle (cream <-> dark) ---------- */
+        const themeToggle = document.querySelector('.theme-toggle');
+        const root = document.documentElement;
+        const stored = localStorage.getItem('theme');
+        // default: dark on mobile, light on desktop — user can override
+        const isMobile = window.matchMedia('(max-width: 720px)').matches;
+        if (stored ? stored === 'dark' : isMobile) root.classList.add('dark');
 
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
+        themeToggle?.addEventListener('click', () => {
+            root.classList.toggle('dark');
+            localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+        });
 
-    <script>
-        // Add smooth scroll behavior for navigation
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        /* ---------- Smooth scroll ---------- */
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const id = a.getAttribute('href');
+                if (id.length > 1) {
+                    const target = document.querySelector(id);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
                 }
             });
         });
 
-        // Add back to top functionality
-        window.addEventListener('scroll', function() {
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
+        /* ---------- Back-to-top ---------- */
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
         });
-      </script>
 
+        /* ---------- Mobile dock: active-section highlight ---------- */
+        const dockItems = document.querySelectorAll('.dock-item');
+        const dockMap = new Map();
+        dockItems.forEach(item => dockMap.set(item.dataset.target, item));
 
+        const sectionEls = ['hero', 'works', 'experience', 'about', 'contact']
+            .map(id => document.getElementById(id))
+            .filter(Boolean);
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    dockItems.forEach(i => i.classList.remove('is-active'));
+                    const active = dockMap.get(entry.target.id);
+                    if (active) active.classList.add('is-active');
+                }
+            });
+        }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+        sectionEls.forEach(el => sectionObserver.observe(el));
+
+        /* ---------- Custom cursor + parallax trail ---------- */
+        const dot = document.querySelector('.cursor-dot');
+        const trail = document.querySelector('.cursor-trail');
+        const hoverPreview = document.querySelector('.hover-preview');
+        const hoverPreviewImg = hoverPreview.querySelector('img');
+        const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+        let trailX = mouseX, trailY = mouseY;
+        let previewX = mouseX, previewY = mouseY;
+
+        if (supportsHover) {
+            document.body.classList.add('has-custom-cursor');
+
+            window.addEventListener('mousemove', e => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+            });
+
+            // Hover-state: enlarge dot over interactive elements
+            document.querySelectorAll('a, button, .work-item, .theme-toggle').forEach(el => {
+                el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+            });
+
+            // Animation loop for trailing dot + preview thumbnail
+            const tick = () => {
+                trailX += (mouseX - trailX) * 0.12;
+                trailY += (mouseY - trailY) * 0.12;
+                trail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+
+                previewX += (mouseX - previewX) * 0.18;
+                previewY += (mouseY - previewY) * 0.18;
+                hoverPreview.style.transform = `translate(${previewX}px, ${previewY}px)`;
+
+                requestAnimationFrame(tick);
+            };
+            tick();
+
+            /* ---------- Works list: hover-preview thumbnail ---------- */
+            document.querySelectorAll('.work-item').forEach(item => {
+                const src = item.dataset.image;
+                item.addEventListener('mouseenter', () => {
+                    if (!src) return;
+                    hoverPreviewImg.src = src;
+                    hoverPreview.classList.add('visible');
+                });
+                item.addEventListener('mouseleave', () => {
+                    hoverPreview.classList.remove('visible');
+                });
+            });
+        }
+
+        /* ---------- Reveal on scroll ---------- */
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.section, .hero, .work-item, .exp-item').forEach(el => io.observe(el));
+    </script>
 </body>
-
 </html>

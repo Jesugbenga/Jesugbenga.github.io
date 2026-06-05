@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg   { fill: #ece4d6; }
+    .ink  { fill: #0c0c0c; }
+    .dot  { fill: #ff3b30; }
+    @media (prefers-color-scheme: dark) {
+      .bg  { fill: #0c0c0c; }
+      .ink { fill: #ece4d6; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14"/>
+  <text class="ink"
+        x="50%" y="50%"
+        text-anchor="middle"
+        dominant-baseline="central"
+        font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="900"
+        font-size="34"
+        letter-spacing="-1.2"
+        dx="-3">JO</text>
+  <circle class="dot" cx="50" cy="44" r="5"/>
+</svg>
