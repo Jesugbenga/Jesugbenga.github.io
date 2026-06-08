@@ -20,13 +20,6 @@
     <div class="cursor-dot" aria-hidden="true"></div>
     <div class="cursor-trail" aria-hidden="true"></div>
 
-    <!-- Floating thumbnail used by the Works list on hover -->
-    <div class="hover-preview" aria-hidden="true">
-        <div class="hover-preview-inner">
-            <img src="" alt="">
-        </div>
-    </div>
-
     <!-- Top navigation -->
     <header class="site-header">
         <a href="#top" class="logo" aria-label="Home">
@@ -110,59 +103,158 @@
             </div>
 
             <ul class="works-list" id="worksList">
-                <li class="work-item" data-image="images/qvault.png">
-                    <a href="https://github.com/UAlberta-CMPUT401/f24project-Dept-of-Pharmacology" target="_blank" rel="noopener">
-                        <img class="work-thumb" src="images/qvault.png" alt="" loading="lazy">
-                        <span class="work-index">01</span>
-                        <span class="work-title">QVault — Learning Management System</span>
-                        <span class="work-meta">Django · Python · Docker · 2024</span>
-                        <span class="work-arrow" aria-hidden="true">↗</span>
-                    </a>
-                </li>
-                <li class="work-item" data-image="images/showtrove.jpg">
-                    <a href="https://showtrove.ca" target="_blank" rel="noopener">
-                        <img class="work-thumb" src="images/showtrove.jpg" alt="" loading="lazy">
-                        <span class="work-index">02</span>
-                        <span class="work-title">Showtrove — Movie Discovery</span>
-                        <span class="work-meta">Next.js · TypeScript · OpenAI · 2024</span>
-                        <span class="work-arrow" aria-hidden="true">↗</span>
-                    </a>
-                </li>
-                <li class="work-item" data-image="images/upnext.png">
-                    <a href="https://github.com/Jesugbenga/upnext" target="_blank" rel="noopener">
-                        <img class="work-thumb" src="images/upnext.png" alt="" loading="lazy">
-                        <span class="work-index">03</span>
-                        <span class="work-title">UpNext — Messaging &amp; Tasks</span>
-                        <span class="work-meta">Flutter · Go · MySQL · 2024</span>
-                        <span class="work-arrow" aria-hidden="true">↗</span>
-                    </a>
-                </li>
-                <li class="work-item" data-image="images/muuv.png">
-                    <a href="https://github.com/Jesugbenga/looply" target="_blank" rel="noopener">
-                        <img class="work-thumb" src="images/muuv.png" alt="" loading="lazy">
-                        <span class="work-index">04</span>
-                        <span class="work-title">Looply — Community Ride-Sharing</span>
-                        <span class="work-meta">React Native · Firebase · 2025</span>
-                        <span class="work-arrow" aria-hidden="true">↗</span>
-                    </a>
-                </li>
                 <li class="work-item" data-image="images/hearth.png">
-                    <a href="https://github.com/Jesugbenga/hearth" target="_blank" rel="noopener">
-                        <img class="work-thumb" src="images/hearth.png" alt="" loading="lazy">
-                        <span class="work-index">05</span>
-                        <span class="work-title">Hearth — AI Home Health Manager</span>
-                        <span class="work-meta">React Native · Llama3 · Firebase · 2025</span>
-                        <span class="work-arrow" aria-hidden="true">↗</span>
-                    </a>
+                    <button class="work-trigger" type="button" aria-expanded="false" aria-controls="work-flourish">
+                        <span class="work-index">01</span>
+                        <span class="work-title">Flourish — Finance Management App</span>
+                        <span class="work-arrow" aria-hidden="true">+</span>
+                    </button>
+                    <div class="work-panel" id="work-flourish">
+                        <div class="work-panel-inner">
+                            <ul class="work-details">
+                                <li>Developed a cross-platform mobile app using React Native (Expo) + TypeScript, integrating Firebase Auth &amp; Firestore with RevenueCat subscriptions for secure user management and premium feature gating.</li>
+                                <li>Engineered AI-driven features with Google Gemini API, including context-aware financial coaching, personalized smart swap suggestions, and AI-powered meal planning.</li>
+                                <li>Built a scalable architecture with server-side validation, clean API contracts, secure caching, and real-time subscription state synchronization.</li>
+                            </ul>
+                            <div class="work-skills"><span>Skills</span> React Native · TypeScript · Expo · Firebase · Firestore · RevenueCat · Google Gemini API</div>
+                            <div class="work-actions">
+                                <a href="https://devpost.com/software/flourish-hdo4z8" target="_blank" rel="noopener">View project ↗</a>
+                                <a href="#" class="work-icon-link" target="_blank" rel="noopener" aria-label="Flourish GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
+
+                <li class="work-item" data-image="images/qvault.png">
+                    <button class="work-trigger" type="button" aria-expanded="false" aria-controls="work-toyota">
+                        <span class="work-index">02</span>
+                        <span class="work-title">Toyota Echo — AI Racing Intelligence</span>
+                        <span class="work-arrow" aria-hidden="true">+</span>
+                    </button>
+                    <div class="work-panel" id="work-toyota">
+                        <div class="work-panel-inner">
+                            <ul class="work-details">
+                                <li>Built an end-to-end ML pipeline processing 20GB+ of Toyota GR Cup telemetry data and engineering 31 domain-specific features from raw sensor streams.</li>
+                                <li>Trained and optimized an XGBoost regression model on 2,000+ racing laps, reaching 2.24s MAE (~1.8% error) in lap-time prediction.</li>
+                                <li>Architected modular preprocessing, chunked memory management, and API-ready outputs for React dashboards, reducing model training errors from 40s+ to under 3s.</li>
+                            </ul>
+                            <div class="work-skills"><span>Skills</span> TypeScript · XGBoost · Python · ML Pipelines · Data Engineering · React · Telemetry Analytics</div>
+                            <div class="work-actions">
+                                <a href="https://devpost.com/software/toyota-echo" target="_blank" rel="noopener">View project ↗</a>
+                                <a href="#" class="work-icon-link" target="_blank" rel="noopener" aria-label="Toyota Echo GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="work-item" data-image="images/hearth.png">
+                    <button class="work-trigger" type="button" aria-expanded="false" aria-controls="work-hearth">
+                        <span class="work-index">03</span>
+                        <span class="work-title">Hearth — Property Management App</span>
+                        <span class="work-arrow" aria-hidden="true">+</span>
+                    </button>
+                    <div class="work-panel" id="work-hearth">
+                        <div class="work-panel-inner">
+                            <ul class="work-details">
+                                <li>Engineered an AI-driven property analysis engine with Cloudflare Workers AI (Llama-3) for predictive maintenance insights and real-time health scoring.</li>
+                                <li>Developed a proprietary Health Scoring Algorithm using React useMemo and custom hooks for deterministic, high-performance data visualization.</li>
+                                <li>Built real-time synchronization with Firebase Firestore and Authentication, batch writes, optimistic UI updates, and a context-aware AI chatbot for service recommendations.</li>
+                            </ul>
+                            <div class="work-skills"><span>Skills</span> Expo · React Native · TypeScript · Firebase · Cloudflare Workers AI · Llama-3 · Firestore</div>
+                            <div class="work-actions">
+                                <a href="https://devpost.com/software/hearth-saxlnu" target="_blank" rel="noopener">View project ↗</a>
+                                <a href="https://github.com/Jesugbenga/hearth" class="work-icon-link" target="_blank" rel="noopener" aria-label="Hearth GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="work-item" data-image="images/qvault.png">
+                    <button class="work-trigger" type="button" aria-expanded="false" aria-controls="work-qvault">
+                        <span class="work-index">04</span>
+                        <span class="work-title">QVault — Learning Management System</span>
+                        <span class="work-arrow" aria-hidden="true">+</span>
+                    </button>
+                    <div class="work-panel" id="work-qvault">
+                        <div class="work-panel-inner">
+                            <ul class="work-details">
+                                <li>Designed a course management platform for an associate professor in the University of Alberta Department of Pharmacology using Django, Python, HTML, CSS, and JavaScript.</li>
+                                <li>Collaborated in a team of 6 using GitHub, Docker, and Selenium to support version control, deployment, and automated testing.</li>
+                                <li>Integrated filtering and tagging by course, semester, and exam type; adopted Cybera hosting and prototyped a cross-platform Electron desktop app.</li>
+                            </ul>
+                            <div class="work-skills"><span>Skills</span> Django · Python · HTML · CSS · JavaScript · Docker · Selenium · Electron · Figma · UML</div>
+                            <div class="work-actions">
+                                <a href="https://cmput401.ca/projects/778dffa8-c241-483a-b7ac-e9ec9a0254aa" target="_blank" rel="noopener">View project ↗</a>
+                                <a href="https://github.com/UAlberta-CMPUT401/f24project-Dept-of-Pharmacology" class="work-icon-link" target="_blank" rel="noopener" aria-label="QVault GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
                 <li class="work-item" data-image="images/face-landmark.jpeg">
-                    <a href="#" target="_blank" rel="noopener">
-                        <img class="work-thumb" src="images/face-landmark.jpeg" alt="" loading="lazy">
+                    <button class="work-trigger" type="button" aria-expanded="false" aria-controls="work-gesture">
+                        <span class="work-index">05</span>
+                        <span class="work-title">Gesture Recognition &amp; Face Landmarks</span>
+                        <span class="work-arrow" aria-hidden="true">+</span>
+                    </button>
+                    <div class="work-panel" id="work-gesture">
+                        <div class="work-panel-inner">
+                            <ul class="work-details">
+                                <li>Developed a gesture recognition system using Google MediaPipe, achieving 96% accuracy across still images and live video feeds.</li>
+                                <li>Reached an average inference time of 167ms per frame for real-time gesture recognition.</li>
+                                <li>Implemented face landmark detection with facial mesh and blendshape scores, plus image rotation, resizing, normalization, color conversion, score thresholds, and label allowlist / denylist filtering.</li>
+                            </ul>
+                            <div class="work-skills"><span>Skills</span> Python · MediaPipe · OpenCV · Computer Vision · Real-Time Inference</div>
+                            <div class="work-actions">
+                                <a href="#" target="_blank" rel="noopener">Project link TBD ↗</a>
+                                <a href="#" class="work-icon-link" target="_blank" rel="noopener" aria-label="Gesture Recognition GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="work-item" data-image="images/upnext.png">
+                    <button class="work-trigger" type="button" aria-expanded="false" aria-controls="work-pocket">
                         <span class="work-index">06</span>
-                        <span class="work-title">Gesture &amp; Face Landmark Detection</span>
-                        <span class="work-meta">Python · MediaPipe · OpenCV · 2023</span>
-                        <span class="work-arrow" aria-hidden="true">↗</span>
-                    </a>
+                        <span class="work-title">Pocket Inventory — Inventory Management App</span>
+                        <span class="work-arrow" aria-hidden="true">+</span>
+                    </button>
+                    <div class="work-panel" id="work-pocket">
+                        <div class="work-panel-inner">
+                            <ul class="work-details">
+                                <li>Worked with a team of 6 to develop an Android application for managing household inventory for insurance purposes.</li>
+                                <li>Used Java, Figma, and UML diagrams to design and implement reliable inventory workflows.</li>
+                                <li>Implemented unit and integration tests with JUnit, and used Firebase and GitHub for backend management and version control.</li>
+                            </ul>
+                            <div class="work-skills"><span>Skills</span> Java · Firebase · JUnit · Figma · UML · GitHub · Android Development</div>
+                            <div class="work-actions">
+                                <a href="https://github.com/CMPUT301F23T07/pocket-inventory" target="_blank" rel="noopener">View project ↗</a>
+                                <a href="https://github.com/CMPUT301F23T07/pocket-inventory" class="work-icon-link" target="_blank" rel="noopener" aria-label="Pocket Inventory GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="work-item" data-image="images/showtrove.jpg">
+                    <button class="work-trigger" type="button" aria-expanded="false" aria-controls="work-showtrove">
+                        <span class="work-index">07</span>
+                        <span class="work-title">Showtrove — Movie / Show Recommendation Website</span>
+                        <span class="work-arrow" aria-hidden="true">+</span>
+                    </button>
+                    <div class="work-panel" id="work-showtrove">
+                        <div class="work-panel-inner">
+                            <ul class="work-details">
+                                <li>Developed a full-stack web application using React, Redux, CSS, Node.js, MongoDB, and Firebase for movie discovery and search.</li>
+                                <li>Implemented robust search functionality using Fuse.js and integrated TMDB API to deliver accurate, up-to-date movie metadata.</li>
+                                <li>Built a scalable backend infrastructure with Node.js and MongoDB to store and manage user data and movie metadata efficiently.</li>
+                            </ul>
+                            <div class="work-skills"><span>Skills</span> React · Redux · CSS · Node.js · MongoDB · Firebase · Fuse.js · TMDB API</div>
+                            <div class="work-actions">
+                                <a href="https://showtrove.ca/" target="_blank" rel="noopener">View live ↗</a>
+                                <a href="https://github.com/Jesugbenga/Showtrove" class="work-icon-link" target="_blank" rel="noopener" aria-label="Showtrove GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
 
@@ -415,16 +507,33 @@
 
         sectionEls.forEach(el => sectionObserver.observe(el));
 
+        /* ---------- Works accordion (one open at a time) ---------- */
+        const workTriggers = document.querySelectorAll('.work-trigger');
+        workTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.closest('.work-item');
+                const willOpen = !item.classList.contains('is-open');
+
+                // close any other open project
+                document.querySelectorAll('.work-item.is-open').forEach(open => {
+                    if (open !== item) {
+                        open.classList.remove('is-open');
+                        open.querySelector('.work-trigger')?.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                item.classList.toggle('is-open', willOpen);
+                trigger.setAttribute('aria-expanded', String(willOpen));
+            });
+        });
+
         /* ---------- Custom cursor + parallax trail ---------- */
         const dot = document.querySelector('.cursor-dot');
         const trail = document.querySelector('.cursor-trail');
-        const hoverPreview = document.querySelector('.hover-preview');
-        const hoverPreviewImg = hoverPreview.querySelector('img');
         const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
         let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
         let trailX = mouseX, trailY = mouseY;
-        let previewX = mouseX, previewY = mouseY;
 
         if (supportsHover) {
             document.body.classList.add('has-custom-cursor');
@@ -441,32 +550,15 @@
                 el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
             });
 
-            // Animation loop for trailing dot + preview thumbnail
+            // Animation loop for trailing dot
             const tick = () => {
                 trailX += (mouseX - trailX) * 0.12;
                 trailY += (mouseY - trailY) * 0.12;
                 trail.style.transform = `translate(${trailX}px, ${trailY}px)`;
 
-                previewX += (mouseX - previewX) * 0.18;
-                previewY += (mouseY - previewY) * 0.18;
-                hoverPreview.style.transform = `translate(${previewX}px, ${previewY}px)`;
-
                 requestAnimationFrame(tick);
             };
             tick();
-
-            /* ---------- Works list: hover-preview thumbnail ---------- */
-            document.querySelectorAll('.work-item').forEach(item => {
-                const src = item.dataset.image;
-                item.addEventListener('mouseenter', () => {
-                    if (!src) return;
-                    hoverPreviewImg.src = src;
-                    hoverPreview.classList.add('visible');
-                });
-                item.addEventListener('mouseleave', () => {
-                    hoverPreview.classList.remove('visible');
-                });
-            });
         }
 
         /* ---------- Reveal on scroll ---------- */
